@@ -6,8 +6,8 @@ app = Flask(__name__)
 CORS(app)  
 
 
-model = pickle.load(open(r'C:\Users\saira\OneDrive\Desktop\Phising_Detection\backend\saved_models\phishing_model.pkl', 'rb'))
-vectorizer = pickle.load(open(r'C:\Users\saira\OneDrive\Desktop\Phising_Detection\backend\saved_models\tfidf_vectorizer.pkl', 'rb'))
+model = pickle.load(open(r'\saved_models\phishing_model.pkl', 'rb'))
+vectorizer = pickle.load(open(r'saved_models\tfidf_vectorizer.pkl', 'rb'))
 
 @app.route('/detect-phishing', methods=['POST'])
 def detect_phishing():
